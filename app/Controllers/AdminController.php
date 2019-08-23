@@ -56,6 +56,12 @@ class AdminController extends Controller
 		$this->adminpage('kk/tambahkk');
 	}
 
+	public function editkk($no_kk)
+	{
+		$data['kk']	= $this->model('kk')->readkkid($no_kk);
+		$this->adminpage('kk/editkk',$data);
+	}
+
 	public function simpanKk($arus=null)
 	{
 		$save 	= $this->model('kk')->createkk();
@@ -63,6 +69,16 @@ class AdminController extends Controller
 			$this->popup('Data berhasil tersimpan','admin/lihatkk');
 		} else {
 			$this->popup('Data KK sudah ada','admin/tambahkk');
+		}	
+	}
+
+	public function updateKk($no_kk)
+	{
+		$save 	= $this->model('kk')->updatekk($no_kk);
+		if ($save) {
+			$this->popup('Data berhasil diperbaharui','admin/detailkk/'.$no_kk);
+		} else {
+			$this->popup('Data KK sudah ada','admin/editkk/'.$no_kk);
 		}	
 	}
 

@@ -74,7 +74,7 @@
 				<label for="golongan_darah">Golongan Darah</label>
 						<select name="golongan_darah" id="" class="form-control">
 								<?php foreach (datagoldar() as $row): ?>
-									<option value="<?= $row ?>" <?= form_check_option($row,$ktp->hubungan_keluarga) ?>><?= $row ?></option>
+									<option value="<?= $row ?>" <?= form_check_option($row,$ktp->golongan_darah) ?>><?= $row ?></option>
 								<?php endforeach ?>
 				</select>
 			</div>
@@ -247,7 +247,7 @@
 				<?php foreach (datalembagapemerintahan() as $row): ?>
 				<div class="col-md-6">
 					<div class="form-group small">
-						<input type="checkbox" name="lembaga_pemerintahan[]" value="<?= $row ?>" <?= form_check_checkbox($row,$ktp->cacat_fisik) ?>>&nbsp; <?= $row ?> &nbsp;&nbsp;&nbsp; 
+						<input type="checkbox" name="lembaga_pemerintahan[]" value="<?= $row ?>" <?= form_check_checkbox($row,$ktp->lembaga_pemerintahan) ?>>&nbsp; <?= $row ?> &nbsp;&nbsp;&nbsp; 
 					</div>
 				</div>
 				<?php endforeach ?>

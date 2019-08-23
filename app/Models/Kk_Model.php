@@ -58,6 +58,23 @@ class Kk extends ModelClass
 		}
 	}
 
+	public function updatekk($no_kk)
+	{
+
+		$d['id_admin']				= $_SESSION['rw'];
+		$d['no_kk']						= $no_kk;
+		$d['kepala_keluarga']	= $this->filter_input($_POST['kepala_keluarga']);
+		$d['alamat']					= $this->filter_input($_POST['alamat']);
+		$d['rt']							= rtrw($_POST['rt']);
+		$d['rw']							= rtrw($_POST['rw']);
+		$d['nama_dusun']			= $this->filter_input($_POST['nama_dusun']);
+		$d['pekerjaan']				= $this->filter_input($_POST['pekerjaan']);
+		$d['jabatan']					= $this->filter_input($_POST['jabatan']);
+		$d['tgl_dibuat']			= setdate();
+
+		return $this->_db->update($d,$no_kk);
+	}
+
 	public function cekkk($no_kk)
 	{
 		return $this->_db->fetchid($no_kk);

@@ -50,6 +50,7 @@
 			<?php if (akses('rw')): ?>
 				<header>
 					<a href="<?= base_url('admin/tambahktp/'.$kk->no_kk) ?>" class="btn btn-primary small">Tambah Anggota Keluarga</a>
+					<a href="<?= base_url('admin/editkk/'.$kk->no_kk) ?>" class="btn btn-success small">Edit Kartu Keluarga</a>
 				</header>
 			<?php endif ?>
 			<div class="table-responsive my-3">
