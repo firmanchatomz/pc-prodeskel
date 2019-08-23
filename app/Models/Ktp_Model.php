@@ -50,6 +50,10 @@ class Ktp extends ModelClass
 	public function createktp($value='')
 	{
 
+		$no_nik 								= $this->filter_input($_POST['no_nik']);
+		if ($this->readktpid($no_nik)) {
+			return FALSE;
+		} else {
 		$d['no_kk'] 						= $this->filter_input($_POST['no_kk']);
 		$d['no_urut'] 					= $this->filter_input($_POST['no_urut']);
 		$d['no_nik'] 						= $this->filter_input($_POST['no_nik']);
@@ -79,6 +83,41 @@ class Ktp extends ModelClass
 		$d['lembaga_ekonomi'] 			= $this->multi('lembaga_ekonomi');
 
 		return $this->_db->insert($d);
+		}
+	}
+
+
+	// format default class
+	public function updatektp($no_nik)
+	{
+
+		$d['no_urut'] 					= $this->filter_input($_POST['no_urut']);
+		$d['nama'] 							= $this->filter_input($_POST['nama']);
+		$d['no_akte'] 					= $this->filter_input($_POST['no_akte']);
+		$d['jk'] 								= $this->filter_input($_POST['jk']);
+		$d['hubungan_keluarga'] = $this->filter_input($_POST['hubungan_keluarga']);
+		$d['tempat_lahir'] 			= $this->filter_input($_POST['tempat_lahir']);
+		$d['tanggal_lahir'] 		= $this->filter_input($_POST['tanggal_lahir']);
+		$d['tgl_dibuat'] 				= setdate();
+		$d['perkawinan'] 				= $this->filter_input($_POST['perkawinan']);
+		$d['agama'] 						= $this->filter_input($_POST['agama']);
+		$d['golongan_darah'] 		= $this->filter_input($_POST['golongan_darah']);
+		$d['kewarganegaraan'] 	= $this->filter_input($_POST['kewarganegaraan']);
+		$d['suku'] 							= $this->filter_input($_POST['suku']);
+		$d['pendidikan'] 				= $this->filter_input($_POST['pendidikan']);
+		$d['pekerjaan'] 				= $this->filter_input($_POST['pekerjaan']);
+		$d['nama_orangtua'] 		= $this->filter_input($_POST['nama_orangtua']);
+		$d['kb'] 								= $this->filter_input($_POST['kb']);
+
+
+		$d['cacat_fisik'] 			= $this->multi('cacat_fisik');
+		$d['cacat_mental'] 			= $this->multi('cacat_mental');
+		$d['wajib_pajak'] 			= $this->multi('wajib_pajak');
+		$d['lembaga_pemerintahan'] 	= $this->multi('lembaga_pemerintahan');
+		$d['lembaga_masyarakat'] 		= $this->multi('lembaga_masyarakat');
+		$d['lembaga_ekonomi'] 			= $this->multi('lembaga_ekonomi');
+
+		return $this->_db->update($d,$no_nik);
 	}
 
 	public function multi($post)

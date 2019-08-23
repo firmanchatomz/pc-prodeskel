@@ -22,9 +22,9 @@ function dataHubunganKeluarga() {
 }
 
 function dataagama() {
-	$data = [ 'Budha',
+	$data = [ 'Islam',
 						'Hindu',
-						'Islam',
+						'Budha',
 						'Katholik',
 						'konghucu',
 						'Kristen',

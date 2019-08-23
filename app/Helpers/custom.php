@@ -39,3 +39,30 @@ function rtrw($data)
 	}
 	return $result;
 }
+
+function form_check_radio($value,$db_value)
+{
+    $result = null;
+    if ($value == $db_value)
+        $result = ' checked ';
+    return $result; 
+}
+
+function form_check_checkbox($value,$db_value)
+{
+    $result = null;
+    $db_value = explode(',', $db_value);
+    for ($i=0; $i < count($db_value); $i++) { 
+	    if ($value == $db_value[$i])
+	        $result = ' checked ';
+    }
+    return $result; 
+}
+
+function form_check_option($value,$db_value)
+{
+  $result = null;
+  if ($value == $db_value)
+    $result = ' selected ';
+  return $result; 
+}

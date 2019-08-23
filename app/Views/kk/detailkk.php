@@ -78,6 +78,9 @@
 	                  <a class="btn btn-primary btn-sm" href="<?= base_url('admin/detailktp/'.$row['no_nik']) ?>">
 	                    <i class="mdi mdi-account-settings-variant text-white icon-sm"></i>
 	                  </a>
+	                   <a class="btn btn-success btn-sm" href="<?= base_url('admin/editktp/'.$row['no_nik']) ?>">
+	                    <i class="mdi mdi-account-edit text-white icon-sm"></i>
+	                  </a>
 	                    <a class="btn btn-danger btn-sm small" onclick="return notif_delete()" href="<?= base_url('admin/hapusktp/'.$row['no_kk'].'/'.$row['no_nik']) ?>">
 	                      <i class="mdi mdi-account-remove text-white icon-sm"></i>
 	                    </a>

@@ -37,8 +37,14 @@ class Kk extends ModelClass
 
 	public function createkk($value='')
 	{
+		$no_kk 								= $this->filter_input($_POST['no_kk']);
+		$cek = $this->cekkk($no_kk);
+		if ($cek) {
+			return FALSE;
+		} else {
+
 		$d['id_admin']				= $_SESSION['rw'];
-		$d['no_kk']						= $this->filter_input($_POST['no_kk']);
+		$d['no_kk']						= $no_kk;
 		$d['kepala_keluarga']	= $this->filter_input($_POST['kepala_keluarga']);
 		$d['alamat']					= $this->filter_input($_POST['alamat']);
 		$d['rt']							= rtrw($_POST['rt']);
@@ -49,6 +55,12 @@ class Kk extends ModelClass
 		$d['tgl_dibuat']			= setdate();
 
 		return $this->_db->insert($d);
+		}
+	}
+
+	public function cekkk($no_kk)
+	{
+		return $this->_db->fetchid($no_kk);
 	}
 
 	public function jumlahkk($value='')

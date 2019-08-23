@@ -62,7 +62,7 @@ class AdminController extends Controller
 		if ($save) {
 			$this->popup('Data berhasil tersimpan','admin/lihatkk');
 		} else {
-			$this->popup('Data Gagal Tersimpan','admin/tambahkk');
+			$this->popup('Data KK sudah ada','admin/tambahkk');
 		}	
 	}
 
@@ -80,9 +80,24 @@ class AdminController extends Controller
 		$this->adminpage('ktp/tambahktp',$data);
 	}
 
+	public function editktp($nik)
+	{
+		$data['ktp'] 		= $this->model('ktp')->readktpid($nik);
+		$this->adminpage('ktp/editktp',$data);
+	}
+
 	public function simpanktp($no_kk)
 	{
 		$save = $this->model('ktp')->createktp();
+		if ($save) {
+			$this->popup('Data berhasil tersimpan','admin/detailkk/'.$no_kk);
+		} else {
+			$this->popup('Data Gagal tersimpan','admin/tambahktp/'.$no_kk);
+		}
+	}
+		public function updatektp($no_kk,$no_nik)
+	{
+		$save = $this->model('ktp')->updatektp($no_nik);
 		if ($save) {
 			$this->popup('Data berhasil tersimpan','admin/detailkk/'.$no_kk);
 		} else {
