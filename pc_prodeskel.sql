@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 23 Agu 2019 pada 01.01
+-- Waktu pembuatan: 23 Agu 2019 pada 11.22
 -- Versi server: 10.1.32-MariaDB
 -- Versi PHP: 5.6.36
 
@@ -44,8 +44,16 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`id_admin`, `username`, `password`, `level`, `nama`, `alamat`, `keterangan`) VALUES
 (1, 'admin', '$2y$10$4M5YgiFwDr3e3DXjzZX.7.EvxX93AO5q9XF85mWnlZO4198Jklr1W', 'admin', 'administrator', '', ''),
-(7, 'rw1', '$2y$10$Nsh6dci8ryya5UFVpIeGbO8SMiUaaoTKifKWkonafH0nnJPoVaMb.', 'rw', 'suhendar', 'kp jeungjing', 'rw1'),
-(8, 'RW2', '$2y$10$SwdrTMdlHLbR6.tBW0Pf3eYsNPWf.NvX7T6oVyrxfJ5yE48504HH6', 'rw', 'GILANG', 'KPJE', 'RW2');
+(8, 'RW2', '$2y$10$SwdrTMdlHLbR6.tBW0Pf3eYsNPWf.NvX7T6oVyrxfJ5yE48504HH6', 'rw', 'siti aminah', 'KPJE', 'operator rw 2'),
+(10, 'RW6', '$2y$10$.V..OexSS8328osK4lPYCOUY81AOR5.qByzU95X1GAq8XyVclCb6C', 'rw', 'tiara', 'kp nangewer', 'operator rw 6'),
+(11, 'RW2', '$2y$10$U6ySuiGpYHSwdxUHkb9Vz.NTpC40Bi8BeJRnRqnnBU5ze0FcoEAyy', 'rw', 'siti aminah', 'kp jeungjing', 'operator rw 2'),
+(12, 'RW8', '$2y$10$e3vBjf9L35JFuZqS1dRrM.2xtjXDCwZECGq7kmJRJKjySFnDYreBi', 'rw', 'devi', 'kp parigi', 'operator rw 8'),
+(13, 'RW1', '$2y$10$UgAkjguTJtj/jB/RAQO5NeNABGApJbWL/jb8/kKUUTqsja3UNvkvu', 'rw', 'UCUM', 'kp jeungjing', 'operator rw 1'),
+(14, 'desa', '$2y$10$tnW92StbHT72pStudHwaFOvNhfC21ckcIfFeu5gcisYXqAI7z3JiK', 'rw', 'desa pelitaasih', '-', 'operator desa'),
+(15, 'RW7', '$2y$10$j50wwlpQAgQ62wel1Ywu6u61AULDVdtE/vMYd4L1D5lQ3ZN0Nt1Ry', 'rw', 'gungun gunawan', 'rt 3 rw 7', 'operator rw 7'),
+(16, 'RW4', '$2y$10$/1q5PTi3DVe5DLH2w2/DG.wrvQW1cHxF5zU0nY8HQI7XD8LULatbm', 'rw', 'wulan', 'kp dayeuh manggung', 'operator 4'),
+(17, 'RW5', '$2y$10$c6JHMTAs92iutKTyQlDSqOczPeVnybb/KsLy38AgmYectvGOFKzUq', 'rw', 'ani', 'kp nangewer', 'operator rw 5'),
+(18, 'RW3', '$2y$10$c9u5nyABmqCO0OL9Qojc9eW2ZBr1Lz9KV5Buj0.ZYCED/XqkU.eGS', 'rw', 'fitri', 'kp dayeuh manggung rt 2 rw 3', 'operator rw 3');
 
 -- --------------------------------------------------------
 
@@ -140,13 +148,26 @@ CREATE TABLE `kk` (
 --
 
 INSERT INTO `kk` (`no_kk`, `id_admin`, `tgl_dibuat`, `kepala_keluarga`, `alamat`, `rt`, `rw`, `nama_dusun`, `pekerjaan`, `jabatan`, `sumber_data`) VALUES
-('3205390303090001', 8, '2019-08-16', 'Momo', 'Kp cisanyoh', '0003', '0005', '2 cisanyoh', 'Wiraswasta', '-', 'Kartu Keluarga'),
-('3205392004160013', 8, '2019-08-16', 'Erit riyanto', 'Kp jeungjing', '0002', '0002', '01', 'Ustadz', '_', 'Kartu Keluarga'),
-('3205392004160067', 8, '2019-08-16', 'Erit riyanto', 'Kp jeungjing', '002', '002', '1', 'Ustadz', '_', 'Kartu Keluarga'),
+('3205390205840005', 18, '2019-08-23', 'SURYANA', 'KP. DAYEUHMANGGUNG', '0000', '0000', 'III DAYEUHMANGGUNG', 'PEDAGANG', '-', 'Kartu Keluarga'),
+('3205390410180003', 17, '2019-08-23', 'RIKI ZULKIFLI', 'KP.NANGGEWER', '003', '005', '', 'PEDAGANG', '-', 'Kartu Keluarga'),
+('3205390412180011', 14, '2019-08-23', 'MITHA NURFATIMAH', 'KP JEUNGJING', '002', '002', '1 JEUNGJING', 'KARYAWAN SWASTA', '-', 'Kartu Keluarga'),
+('3205391008150014', 8, '2019-08-23', 'ABDUL KOSIM', 'KP JEUNGJING', '002', '002', '1 JEUNGJING', 'KARYAWAN SWASTA', '-', 'Kartu Keluarga'),
+('3205391312080017', 15, '2019-08-23', 'HENI HUDAYA', 'KP BATUNUNGGUL', '001', '007', 'III DAYEUHMANGGUNG', 'WIRASWASTA', '-', 'Kartu Keluarga'),
+('3205391901170008', 10, '2019-08-23', 'SAPI&#39;I', 'KP NANGGEWER', '001', '006', 'II CISANYOH', 'PETANI/PEKEBUN', '-', 'Kartu Keluarga'),
+('3205391908150004', 14, '2019-08-23', 'HENDRI', 'KP. BATUNUNGGUL', '001', '007', 'III DAYEUH MANGGUNG', '-', '-', 'Kartu Keluarga'),
+('3205392212070311', 13, '2019-08-23', 'OHA PURAWINATA', 'KP JEUNGJING', '005', '001', '1', 'PENSIUNAN', '-', 'Kartu Keluarga'),
+('3205392212070312', 13, '2019-08-23', 'USMAN', 'KPJEUNGJING', '005', '001', '1', 'PETANI', '-', 'Kartu Keluarga'),
+('3205392309140009', 18, '2019-08-23', 'GUNAWAN', 'KP.DAYEUHMANGGUNG', '0000', '0000', 'III DAYEUHMANGGUNG', 'BURUH HARIAN LEPAS', '-', 'Kartu Keluarga'),
+('3205392311150009', 15, '2019-08-23', 'HENDI SETIAWAN', 'KP. BATUNUNGGUL', '001', '007', 'III DAYEUHMANGGUNG', 'MEKANIK', '-', 'Kartu Keluarga'),
+('3205392411170003', 16, '2019-08-23', 'CICI', 'KP.CISANYOH', '0002', '0004', 'II CISANYOH', 'MENGURUS RUMAH TANGGA', '-', 'Kartu Keluarga'),
 ('3205392508170008', 8, '2019-08-16', 'SURYANA', 'KP.DAYEUHMANGGUNG', '0000', '0000', '3', 'PEDAGANG', '_', 'Kartu Keluarga'),
-('3205393112070233', 8, '2019-08-16', 'Majid', 'Kp jeungjing', '0000', '0000', '1', 'Buruh', '_', 'Kartu Keluarga'),
-('3295392508110002', 8, '2019-08-16', 'GUNGUN GUNAWAN MULYANA', 'KP.BATU NUNGGUL', '0003', '0007', '03', 'Wiraswasta', '-', 'Kartu Keluarga'),
-('43637286280', 8, '2019-08-16', 'GILANG', 'KPJE', '004', '002', '1', 'wiraswata', '-', 'Kartu Keluarga');
+('3205392612070150', 16, '2019-08-23', 'PANDI SOPANDI', 'KP.CISANYOH', '0002', '0004', 'II CISANYOH', 'WIRASWASTA', 'KETUA RW 04', 'Kartu Keluarga'),
+('3205392712070052', 12, '2019-08-23', 'IDI  RASDI', 'KP PARIGI', '001', '008', 'III DAYEUH MANGGUNG', 'PETANI', 'RW', 'Kartu Keluarga'),
+('3205392812070124', 10, '2019-08-23', 'DULOH ISKANDAR', 'KP NANGGEWER', '001', '006', 'II CISANYOH', 'PETANI/PEKEBUN', '-', 'Kartu Keluarga'),
+('3205392812070135', 10, '2019-08-23', 'OJO', 'KP NANGGEWER', '001', '006', 'II CISANYOH', 'PETANI/PEKEBUN', '-', 'Kartu Keluarga'),
+('3205392906090001', 8, '2019-08-23', 'EVI SOBIRIN', 'KP JEUNGJING', '002', '002', '1 JEUNGJING', 'WIRASWASTA', 'KAUR KEUANGAN', 'Kartu Keluarga'),
+('3205393112070128', 15, '2019-08-23', 'RUDI', 'KP BATU NUNGGUL', '001', '007', '', 'PEDAGANG', '-', 'Kartu Keluarga'),
+('3295392508110002', 8, '2019-08-16', 'GUNGUN GUNAWAN MULYANA', 'KP.BATU NUNGGUL', '0003', '0007', '03', 'Wiraswasta', '-', 'Kartu Keluarga');
 
 -- --------------------------------------------------------
 
@@ -187,12 +208,54 @@ CREATE TABLE `ktp` (
 --
 
 INSERT INTO `ktp` (`no_nik`, `no_urut`, `no_kk`, `no_akte`, `nama`, `jk`, `tempat_lahir`, `tanggal_lahir`, `agama`, `pendidikan`, `pekerjaan`, `tgl_dibuat`, `perkawinan`, `hubungan_keluarga`, `kewarganegaraan`, `nama_orangtua`, `golongan_darah`, `suku`, `kb`, `cacat_fisik`, `cacat_mental`, `wajib_pajak`, `lembaga_pemerintahan`, `lembaga_masyarakat`, `lembaga_ekonomi`) VALUES
-('12786289919', 1, '43637286280', '24467818189', 'GILANG', 'laki-laki', 'GARUT', '1999-04-13', 'Islam', 'Sedang S-1/sederajat', 'Dokter swasta', '2019-08-16', 'sudah kawin', 'Ayah', 'Warga Negara Indonesia', 'DEDE', 'O', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', 'Wajib Pajak Bumi dan Bangunan,Wajib Pajak Kendaraan Bermotor', 'Anggota BPD', '', ''),
+('3204276203900002', 2, '3205392906090001', '-', 'KUSMIATI', 'perempuan', 'GARUT', '1990-03-22', 'Islam', 'Tamat SLTA/sederajat', 'Karyawan Perusahaan Swasta', '2019-08-23', 'sudah kawin', 'Istri', 'Warga Negara Indonesia', 'AI WALIYAH/ANIN', 'Tidak Tahu', 'SUNDA', 'KB Alamiah/Kalender', '', '', 'Wajib Pajak Kendaraan Bermotor', '', 'Pengurus PKK', ''),
+('3205325402950001', 2, '3205391008150014', '-', 'FITRI HERDIANTI RAMADHAN', 'perempuan', 'GARUT', '1995-02-14', 'Islam', 'Tamat SLTA/sederajat', 'Ibu Rumah Tangga', '2019-08-23', 'sudah kawin', 'Istri', 'Warga Negara Indonesia', 'KARTIKA/MAHUDIN', 'Tidak Tahu', 'SUNDA', 'Suntik', '', '', '', '', '', ''),
+('3205390101430008', 1, '3205392812070135', '-', 'OJO', 'laki-laki', 'GARUT', '1946-01-03', 'Islam', 'Tamat SD/sederajat', 'Petani', '2019-08-23', 'sudah kawin', 'Kepala Keluarga', 'Warga Negara Indonesia', 'EHA/MAJASIK', 'Tidak Tahu', 'SUNDA', 'KB Alamiah/Kalender', '', '', 'Wajib Pajak Bumi dan Bangunan', '', '', ''),
+('3205390102700006', 1, '3205393112070128', '-', 'RUDI', 'laki-laki', 'GARUT', '1970-02-01', 'Islam', 'Tamat SD/sederajat', 'Pedagang Keliling', '2019-08-23', 'belum kawin', 'Kepala Keluarga', 'Warga Negara Indonesia', 'EJE/EROH', 'O', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', 'Wajib Pajak Bumi dan Bangunan,Wajib Pajak Kendaraan Bermotor', '', '', 'Warung kelontongan/Kios'),
+('3205390202050003', 2, '3205390412180011', '-', 'TAN TAN MUZAKI', 'laki-laki', 'GARUT', '2005-05-25', 'Islam', 'Tamat SD/sederajat', 'Belum Bekerja', '2019-08-23', 'belum kawin', 'Adik', 'Warga Negara Indonesia', 'TITIN KARTINI/EMPUD MAHPUDIN', 'Tidak Tahu', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', '', '', '', ''),
+('3205390205840005', 1, '3205390205840005', '-', 'SURYANA', 'laki-laki', 'SUMEDANG', '1984-05-02', 'Islam', 'Sedang SLTP/sederajat', 'Pedagang barang kelontongan', '2019-08-23', 'sudah kawin', 'Kepala Keluarga', 'Warga Negara Indonesia', 'KARWITA/ERUM', 'Tidak Tahu', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', 'Wajib Pajak Bumi dan Bangunan,Wajib Pajak Kendaraan Bermotor', '', '', ''),
 ('320539020584005', 1, '3205392508170008', '_', 'SURYANA', 'laki-laki', 'SUMEDANG', '1984-05-02', 'Islam', 'Sedang SLTP/sederajat', 'Pedagang Keliling', '2019-08-16', 'sudah kawin', 'Kepala Keluarga', 'Warga Negara Indonesia', 'ERUM/KARWITA', 'O', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', 'Wajib Pajak Bumi dan Bangunan,Wajib Pajak Kendaraan Bermotor', '', '', ''),
-('3205390910690001', 1, '3205393112070233', '46465', 'Majid', 'laki-laki', 'Garut', '1969-10-09', 'Islam', 'Tamat SD/sederajat', 'Buruh Harian Lepas', '2019-08-16', 'sudah kawin', 'Ayah', 'Warga Negara Indonesia', 'Isoh/suka&#39;i', 'Tidak Tahu', 'Sunda', 'Tidak Menggunakan kontrasepsi', '', '', '', '', '', ''),
+('3205390306630003', 1, '3205392212070312', '-', 'USMAN', 'laki-laki', 'GARUT', '1963-03-06', 'Islam', 'Tamat SD/sederajat', 'Petani', '2019-08-23', 'sudah kawin', 'Kepala Keluarga', 'Warga Negara Indonesia', 'M. SA&#39;I / SITI', 'O', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', 'Wajib Pajak Bumi dan Bangunan,Wajib Pajak Kendaraan Bermotor', '', 'Pengurus RT', ''),
+('3205390401170001', 4, '3205392309140009', '-', 'MUHAMMAD DAFFA MAULANA', 'laki-laki', 'GARUT', '2017-01-04', 'Islam', 'Belum masuk TK/Kelompok Bermain', 'Belum Bekerja', '2019-08-23', 'belum kawin', 'Anak Kandung', 'Warga Negara Indonesia', 'IMAS SITI SOLEHAH/GUNAWAN', 'O', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', '', '', '', ''),
+('3205390408480001', 1, '3205392212070311', '-', 'OHA PURAWINATA', 'laki-laki', 'GARUT', '1948-08-04', 'Islam', 'Tamat SLTA/sederajat', 'Purnawirawan/Pensiunan', '2019-08-23', 'sudah kawin', 'Kepala Keluarga', 'Warga Negara Indonesia', 'SITI / M.SA&#39;I', 'Tidak Tahu', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', 'Wajib Pajak Bumi dan Bangunan', '', '', ''),
+('3205390610930002', 1, '3205392311150009', '-', 'HENDI SETIAWAN', 'laki-laki', 'GARUT', '1993-10-06', 'Islam', 'Sedang SLTA/sederajat', 'Montir', '2019-08-23', 'sudah kawin', 'Kepala Keluarga', 'Warga Negara Indonesia', 'ISOH/ISO', 'Tidak Tahu', 'SUNDA', 'Tidak Menjawab', '', '', 'Wajib Pajak Kendaraan Bermotor', '', '', ''),
+('3205390807140001', 4, '3205392712070052', '-', 'AMANDA RAHMADANI', 'perempuan', 'GARUT', '2014-07-08', 'Islam', 'Sedang TK/Kelompok Bermain', 'Pelajar', '2019-08-23', 'belum kawin', 'Anak Kandung', 'Warga Negara Indonesia', 'SRI NURWARNIDA/IDI RASDI', 'Tidak Tahu', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', '', '', '', ''),
+('3205390906600002', 1, '3205392612070150', '-', 'PANDI SOPANDI', 'laki-laki', 'GARUT', '1961-11-01', 'Islam', 'Tamat SD/sederajat', 'Wiraswasta', '2019-08-23', 'sudah kawin', 'Kepala Keluarga', 'Warga Negara Indonesia', 'ERI/SAKIM', 'Tidak Tahu', 'SUNDA', 'KB Alamiah/Kalender', '', '', 'Wajib Pajak Bumi dan Bangunan,Wajib Pajak Kendaraan Bermotor', '', 'Pengurus RW', ''),
 ('3205391109180001', 3, '3205392508170008', '_', 'REVAN SEPTIAN', 'laki-laki', 'GARUT', '2018-09-11', 'Islam', 'Belum masuk TK/Kelompok Bermain', 'Ahli Pengobatan Alternatif', '2019-08-16', 'belum kawin', 'Anak Kandung', 'Warga Negara Indonesia', 'RENI/SURYANA', 'O', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', '', '', '', ''),
-('3205391208890002', 1, '3205392004160013', '_', 'Erit riyanto', 'laki-laki', 'Garut', '1989-08-12', 'Islam', 'Tamat SLTA/sederajat', 'Belum Bekerja', '2019-08-16', 'sudah kawin', 'Ayah', 'Warga Negara Indonesia', 'Siti robiah/maman', 'Tidak Tahu', 'Sunda', 'Tidak Menggunakan kontrasepsi', '', '', 'Wajib Pajak Bumi dan Bangunan,Wajib Pajak Kendaraan Bermotor', '', 'Anggota Organisasi Keagamaan', ''),
-('3205396912890003', 2, '3205392508170008', '_', 'RENI MULYANI', 'perempuan', 'GARUT', '1989-12-29', 'Islam', 'Sedang SLTP/sederajat', 'Ibu Rumah Tangga', '2019-08-16', 'sudah kawin', 'Istri', 'Warga Negara Indonesia', 'ILOH/ADMA', 'O', 'SUNDA', 'KB Alamiah/Kalender', '', '', '', '', '', '');
+('3205391305820002', 3, '3205392212070311', '-', 'KOMARUDIN', 'laki-laki', 'GARUT', '1983-05-13', 'Islam', 'Tamat SLTP/sederajat', 'Belum Bekerja', '2019-08-23', 'belum kawin', 'Anak Kandung', 'Warga Negara Indonesia', 'SUTIARA /OHA PURAWINATA', 'Tidak Tahu', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', 'Wajib Pajak Kendaraan Bermotor', '', '', ''),
+('3205391311170002', 3, '3205390410180003', '-', 'FARIZ NUR IKHSAN', 'laki-laki', 'GARUT', '2017-11-13', 'Islam', 'Belum masuk TK/Kelompok Bermain', 'Belum Bekerja', '2019-08-23', 'belum kawin', 'Anak Kandung', 'Warga Negara Indonesia', 'FITRIANI/RIKI ZULKIFLI', 'Tidak Tahu', 'SUNDA', 'KB Alamiah/Kalender', '', '', '', '', '', ''),
+('3205391311880002', 1, '3205392309140009', '-GARUT', 'GUNAWAN', 'laki-laki', 'GARUT', '1988-11-13', 'Islam', 'Tamat SLTA/sederajat', 'Buruh Harian Lepas', '2019-08-23', 'sudah kawin', 'Kepala Keluarga', 'Warga Negara Indonesia', 'KIAH/JAKA', 'O', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', 'Wajib Pajak Bumi dan Bangunan,Wajib Pajak Kendaraan Bermotor', '', '', ''),
+('3205391405770001', 1, '3205392712070052', '-', 'IDI RASDI', 'laki-laki', 'GARUT', '1976-05-14', 'Islam', 'Tamat SD/sederajat', 'Petani', '2019-08-23', 'sudah kawin', 'Kepala Keluarga', 'Warga Negara Indonesia', 'TIAH/ACA', 'O', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', 'Wajib Pajak Bumi dan Bangunan,Wajib Pajak Kendaraan Bermotor', 'Staf Desa/Kelurahan', 'Anggota Organisasi Kelompok Tani/Nelayan,Pengurus RW', 'Bank Perkreditan Rakyat'),
+('3205391506820001', 1, '3205392812070124', '-', 'DULOH ISKANDAR', 'laki-laki', 'GARUT', '1982-06-15', 'Islam', 'Sedang SLTP/sederajat', 'Petani', '2019-08-23', 'sudah kawin', 'Kepala Keluarga', 'Warga Negara Indonesia', 'ETI/OJO', 'Tidak Tahu', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', 'Wajib Pajak Bumi dan Bangunan', '', 'Pengurus RW', ''),
+('3205391508890002', 1, '3205392906090001', '-', 'EVI SOBIRIN', 'laki-laki', 'GARUT', '1989-08-15', 'Islam', 'Tamat SLTA/sederajat', 'Wiraswasta', '2019-08-23', 'sudah kawin', 'Kepala Keluarga', 'Warga Negara Indonesia', 'DEDE SURYANI/JUJUN PRATAMA', 'AB', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', 'Wajib Pajak Bumi dan Bangunan,Wajib Pajak Kendaraan Bermotor', 'Staf Desa/Kelurahan', '', ''),
+('3205391611080001', 3, '3205392812070124', '-', 'MUHAMAD ARDIANSYAH', 'laki-laki', 'GARUT', '2008-11-16', 'Islam', 'Sedang SD/sederajat', 'Pelajar', '2019-08-23', 'belum kawin', 'Anak Kandung', 'Warga Negara Indonesia', 'FITRI ROHAYATI/DULOH ISKANDAR', 'Tidak Tahu', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', '', '', '', ''),
+('3205391901870001', 1, '3205391008150014', '-', 'ABDUL KOSIM', 'laki-laki', 'GARUT', '1987-01-19', 'Islam', 'Tamat S-3/sederajat', 'Dosen swasta', '2019-08-23', 'sudah kawin', 'Kepala Keluarga', 'Warga Negara Indonesia', 'H DUDUDNG/ENTIN HARTINI', 'Tidak Tahu', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', '', '', '', ''),
+('3205392509960002', 1, '3205390410180003', '-', 'RIKI ZULKIFLI', 'laki-laki', 'GARUT', '1996-09-25', 'Islam', 'Tamat SLTP/sederajat', 'Pedagang barang kelontongan', '2019-08-23', 'sudah kawin', 'Kepala Keluarga', 'Warga Negara Indonesia', 'TATI/HERYANA', 'Tidak Tahu', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', '', '', '', ''),
+('3205392606010001', 3, '3205392212070312', '-', 'JAJANG SOLAHUDIN', 'laki-laki', 'GARUT', '2001-06-26', 'Islam', 'Tamat SLTP/sederajat', 'Belum Bekerja', '2019-08-23', 'belum kawin', 'Anak Kandung', 'Warga Negara Indonesia', 'USMAN/ISAH', 'O', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', '', '', '', ''),
+('3205394102650001', 2, '3205392212070312', '-', 'ISAH', 'perempuan', 'GARUT', '1965-01-02', 'Islam', 'Tamat SD/sederajat', 'Ibu Rumah Tangga', '2019-08-23', 'sudah kawin', 'Istri', 'Warga Negara Indonesia', 'RUMSA/EURI', 'O', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', '', '', '', ''),
+('3205394102750008', 2, '3205393112070128', '-', 'ENIS', 'perempuan', 'GARUT', '1975-02-01', 'Islam', 'Tamat SD/sederajat', 'Ibu Rumah Tangga', '2019-08-23', 'sudah kawin', 'Istri', 'Warga Negara Indonesia', 'SUJA/SANTIJAH', 'Tidak Tahu', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', '', '', '', 'Warung kelontongan/Kios'),
+('3205394401170002', 5, '3205392309140009', '-', 'SALWA SITI ASIAH', 'perempuan', 'GARUT', '2017-01-04', 'Islam', 'Belum masuk TK/Kelompok Bermain', 'Belum Bekerja', '2019-08-23', 'belum kawin', 'Anak Kandung', 'Warga Negara Indonesia', 'IMAS SITI SOLEHAH/GUNAWAN', 'Tidak Tahu', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', '', '', '', ''),
+('3205394503530001', 2, '3205392812070135', '-', 'ETI', 'perempuan', 'GARUT', '1953-10-04', 'Islam', 'Tamat SD/sederajat', 'Ibu Rumah Tangga', '2019-08-23', 'sudah kawin', 'Istri', 'Warga Negara Indonesia', 'OCIH/TAHRI', 'Tidak Tahu', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', '', '', 'Pengurus Posyandu', ''),
+('3205394504180001', 4, '3205391312080017', '-', 'KHAYLA NAZWA APRILLIA', 'perempuan', 'GARUT', '2018-04-05', 'Islam', 'Belum masuk TK/Kelompok Bermain', 'Belum Bekerja', '2019-08-23', 'belum kawin', 'Anak Kandung', 'Warga Negara Indonesia', 'HENI HUDAYA/POPI PONDAAH', 'Tidak Tahu', 'SUNDA', 'Tidak Menjawab', '', '', '', '', '', ''),
+('3205394512000001', 1, '3205390412180011', '-', 'MITHA NURFATIMAH', 'perempuan', 'GARUT', '1998-11-30', 'Islam', 'Tamat SLTA/sederajat', 'Karyawan Perusahaan Swasta', '2019-08-23', 'belum kawin', 'Kepala Keluarga', 'Warga Negara Indonesia', 'TITIN KARTINI/EMPUD MAHPUDIN', 'Tidak Tahu', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', 'Wajib Pajak Kendaraan Bermotor', '', '', ''),
+('3205394512040001', 3, '3205392612070150', '-', 'AMANDA HERWIDIANA', 'perempuan', 'GARUT', '2004-05-12', 'Islam', 'Sedang SLTP/sederajat', 'Pelajar', '2019-08-23', 'belum kawin', 'Anak Kandung', 'Warga Negara Indonesia', 'PIAH ROKAYAH/PANDI SOPANDI', 'O', 'SUNDA', 'KB Alamiah/Kalender', '', '', '', '', '', ''),
+('3205394612620001', 2, '3205392612070150', '-', 'PIAH ROKAYAH', 'perempuan', 'GARUT', '1963-05-12', 'Islam', 'Tamat SD/sederajat', 'Ibu Rumah Tangga', '2019-08-23', 'sudah kawin', 'Istri', 'Warga Negara Indonesia', 'TIOH/ASMITA', 'Tidak Tahu', 'SUNDA', 'KB Alamiah/Kalender', '', '', '', '', '', ''),
+('3205394710900004', 2, '3205391312080017', '-', 'POPI PONDAAH', 'perempuan', 'GARUT', '1990-10-07', 'Islam', 'Sedang SLTP/sederajat', 'Ibu Rumah Tangga', '2019-08-23', 'sudah kawin', 'Istri', 'Warga Negara Indonesia', 'ADE ODI/ACIH', 'O', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', '', '', '', ''),
+('3205394807130001', 4, '3205392812070124', '-', 'ZAHRA TUSITA', 'perempuan', 'GARUT', '2013-07-08', 'Islam', 'Sedang TK/Kelompok Bermain', 'Pelajar', '2019-08-23', 'belum kawin', 'Anak Kandung', 'Warga Negara Indonesia', 'FITRI ROHAYATI/DULOH ISKANDAR', 'Tidak Tahu', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', '', '', '', ''),
+('3205395008970002', 2, '3205392311150009', '-', 'RENI RISMAWATI', 'perempuan', 'GARUT', '1996-10-28', 'Islam', 'Sedang SLTA/sederajat', 'Ibu Rumah Tangga', '2019-08-23', 'sudah kawin', 'Istri', 'Warga Negara Indonesia', 'NONO HARYONO/MIMIN', 'Tidak Tahu', 'SUNDA', 'Tidak Menjawab', '', '', '', '', '', ''),
+('3205395305940006', 2, '3205392309140009', '-', 'IMAS SITI SOLEHAH', 'perempuan', 'GARUT', '1994-05-13', 'Islam', 'Tamat SD/sederajat', 'Ibu Rumah Tangga', '2019-08-23', 'sudah kawin', 'Istri', 'Warga Negara Indonesia', 'YAIH/IYA MULYADI', 'Tidak Tahu', 'SUNDA', 'KB Alamiah/Kalender', '', '', '', '', '', ''),
+('3205395511020003', 3, '3205393112070128', '-', 'FITRIANI', 'perempuan', 'GARUT', '2002-11-15', 'Islam', 'Belum masuk TK/Kelompok Bermain', 'Ahli Pengobatan Alternatif', '2019-08-23', 'belum kawin', 'Anak Kandung', 'Warga Negara Indonesia', 'ENIS/RUDI', 'Tidak Tahu', 'SUNDA', 'KB Alamiah/Kalender', '', '', '', '', '', ''),
+('3205395805880002', 2, '3205392812070124', '-', 'FITRI ROHAYATI', 'perempuan', 'GARUT', '1988-05-18', 'Islam', 'Sedang SLTP/sederajat', 'Ibu Rumah Tangga', '2019-08-23', 'sudah kawin', 'Istri', 'Warga Negara Indonesia', 'MINTARSIH/SOBARI', 'Tidak Tahu', 'SUNDA', 'Suntik', '', '', '', '', '', ''),
+('3205396001990002', 2, '3205390410180003', '-', 'FITRIANI', 'perempuan', 'BANDUNG', '1999-01-20', 'Islam', 'Tamat SLTP/sederajat', 'Ibu Rumah Tangga', '2019-08-23', 'sudah kawin', 'Istri', 'Warga Negara Indonesia', 'RATNASIH/SUHENDAR', 'Tidak Tahu', 'SUNDA', 'Suntik', '', '', '', '', '', ''),
+('3205396008530002', 2, '3205392212070311', '-', 'SUTIARA', 'laki-laki', 'GARUT', '1953-08-20', 'Islam', 'Sedang SD/sederajat', 'Ibu Rumah Tangga', '2019-08-23', 'sudah kawin', 'Istri', 'Warga Negara Indonesia', 'SUTIMAH /ATMA', 'Tidak Tahu', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', '', '', '', ''),
+('3205396102090003', 3, '3205391312080017', '-', 'KEYISHA RAHMAWATI', 'perempuan', 'GARUT', '2009-02-21', 'Islam', 'Sedang SD/sederajat', 'Belum Bekerja', '2019-08-23', 'belum kawin', 'Anak Kandung', 'Warga Negara Indonesia', 'HENI HUDAYA/POPI PONDAAH', 'Tidak Tahu', 'SUNDA', 'Tidak Menjawab', '', '', '', '', '', ''),
+('3205396607790002', 2, '3205392712070052', '-', 'SRI NURWARNIDA', 'perempuan', 'GARUT', '1979-07-28', 'Islam', 'Tamat SLTP/sederajat', 'Pedagang barang kelontongan', '2019-08-23', 'sudah kawin', 'Istri', 'Warga Negara Indonesia', 'YAYAH/H.OMO', 'O', 'SUNDA', 'Spiral', '', '', 'Wajib Pajak Bumi dan Bangunan', '', '', ''),
+('3205396806160001', 3, '3205392311150009', '-', 'NAYLA AZAHRA SETIAWATI', 'perempuan', 'GARUT', '2016-06-28', 'Islam', 'Belum masuk TK/Kelompok Bermain', 'Tidak Mempunyai Pekerjaan Tetap', '2019-08-23', 'belum kawin', 'Anak Kandung', 'Warga Negara Indonesia', 'HENDI SETIAWAN/RENI RISMAWATI', 'Tidak Tahu', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', '', '', '', ''),
+('3205396905100001', 3, '3205392309140009', '-', 'IREN SITI HAMIDAH', 'perempuan', 'GARUT', '2010-05-29', 'Islam', 'Sedang SD/sederajat', 'Belum Bekerja', '2019-08-23', 'belum kawin', 'Anak Kandung', 'Warga Negara Indonesia', 'IMAS SITI SOLEHAH/GUNAWAN', 'O', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', '', '', '', ''),
+('3205396912890003', 2, '3205392508170008', '_', 'RENI MULYANI', 'perempuan', 'GARUT', '1989-12-29', 'Islam', 'Sedang SLTP/sederajat', 'Ibu Rumah Tangga', '2019-08-16', 'sudah kawin', 'Istri', 'Warga Negara Indonesia', 'ILOH/ADMA', 'O', 'SUNDA', 'KB Alamiah/Kalender', '', '', '', '', '', ''),
+('3205397003160001', 3, '3205391008150014', '-', 'ALYA JAZILAH ULFA', 'perempuan', 'GARUT', '2016-03-30', 'Islam', 'Belum masuk TK/Kelompok Bermain', 'Belum Bekerja', '2019-08-23', 'belum kawin', 'Anak Kandung', 'Warga Negara Indonesia', 'FITRI HERDIANTI RAMADHAN', 'Tidak Tahu', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', '', '', '', ''),
+('3205397010920002', 3, '3205392712070052', '-', 'CUCUM KARLINA', 'perempuan', 'GARUT', '1999-10-31', 'Islam', 'Sedang S-1/sederajat', 'Pelajar', '2019-08-23', 'belum kawin', 'Anak Kandung', 'Warga Negara Indonesia', 'SRI NURWARNIDA/IDI RASDI', 'Tidak Tahu', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', '', '', '', ''),
+('3295390512870001', 1, '3205391312080017', '-', 'HENI HUDAYA', 'laki-laki', 'GARUT', '1987-12-05', 'Islam', 'Sedang SLTP/sederajat', 'Wiraswasta', '2019-08-23', 'belum kawin', 'Kepala Keluarga', 'Warga Negara Indonesia', 'APIT/TINI', 'O', 'SUNDA', 'Tidak Menggunakan kontrasepsi', '', '', 'Wajib Pajak Bumi dan Bangunan,Wajib Pajak Kendaraan Bermotor', '', '', 'Angkutan Darat');
 
 -- --------------------------------------------------------
 
@@ -445,7 +508,7 @@ ALTER TABLE `setting`
 -- AUTO_INCREMENT untuk tabel `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT untuk tabel `aruskk`
