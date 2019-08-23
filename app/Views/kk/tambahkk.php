@@ -88,7 +88,7 @@
 					</td>
 					<td>
 						<div class="form-group">
-							<input type="text" name="jabatan" class="form-control" placeholder="masukkan nama kabupaten/kota" required>
+							<input type="text" name="jabatan" class="form-control" placeholder="masukkan nama kabupaten/kota">
 						</div>
 					</td>
 				</tr>
